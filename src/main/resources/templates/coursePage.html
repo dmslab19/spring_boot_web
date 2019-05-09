@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>과목 상세 정보</title>
+</head>
+<body>
+    <h3 th:text="${course.courseName}">과목명</h3>
+    <a th:href="@{'/courses/' + ${previous} + '/' }">&lt; 이전 강의</a>
+    <span>|다른 수업 정보|</span>
+    <a th:href="@{'/courses/' + ${next} + '/' }">다음 강의 &gt;</a>
+    <ul>
+        <li>과목코드: <span th:text="${course.courseId}"></span> </li>
+        <li>과목명: <span th:text="${course.courseName}"></span></li>
+    </ul>
+    <a th:href="@{'/'}">목록으로</a>
+</body>
+</html>

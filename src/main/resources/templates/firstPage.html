@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>전체 수업 목록</title>
+</head>
+<body>
+    <h3>전체 수업 목록</h3>
+    
+    <ul>
+        <li th:each="course: ${courses}"><a
+            th:href="@{'/courses/' + ${course.courseId} + '/' }"
+            th:text="${course.courseName}"></a></li>
+    </ul>
+</body>
+</html>
